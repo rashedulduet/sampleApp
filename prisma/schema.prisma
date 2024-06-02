@@ -1,0 +1,73 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model mymenu{
+  id Int @id @default(autoincrement())
+  menuName String @db.VarChar(50)  
+  createdAt DateTime @default(now()) @db.Timestamp(0)
+  updatedAt DateTime @default(now()) @db.Timestamp(0) @updatedAt
+}
+
+model social{
+  id Int @id @default(autoincrement())
+  facebook String @db.VarChar(200)
+  youtube String @db.VarChar(200)
+  Linkedin String @db.VarChar(200)
+  twitter String @db.VarChar(200)
+  createdAt DateTime @default(now()) @db.Timestamp(0)
+  updatedAt DateTime @default(now()) @db.Timestamp(0) @updatedAt
+}
+model NoticLIst{
+  id Int @id @default(autoincrement())
+  title String @db.VarChar(200)
+  document String @db.VarChar(200)
+   createdAt DateTime @default(now()) @db.Timestamp(0)
+  updatedAt DateTime @default(now()) @db.Timestamp(0) @updatedAt
+}
+model documents{
+  id Int @id @default(autoincrement())
+  title String @db.VarChar(200)
+  document String @db.VarChar(200)
+  createdAt DateTime @default(now()) @db.Timestamp(0)
+  updatedAt DateTime @default(now()) @db.Timestamp(0) @updatedAt
+}
+model courses{
+  id Int @id @default(autoincrement())
+  title String @db.VarChar(200)
+  duration String @db.VarChar(200)  
+  type String @db.VarChar(200)
+  document String @db.VarChar(200)
+  mode String @db.VarChar(200)
+  month String @db.VarChar(200) 
+  createdAt DateTime @default(now()) @db.Timestamp(0)
+  updatedAt DateTime @default(now()) @db.Timestamp(0) @updatedAt
+
+}
+model seat{
+  id Int @id @default(autoincrement())
+  SeatType String @db.VarChar(200)
+  TotalSeat String @db.VarChar(200)  
+  OccupiedSeat String @db.VarChar(200) 
+  createdAt DateTime @default(now()) @db.Timestamp(0)
+  updatedAt DateTime @default(now()) @db.Timestamp(0) @updatedAt
+}
+model seatPlan{
+  id Int @id @default(autoincrement())
+  SeatType String @db.VarChar(200)
+  TotalSeat Int @db.SmallInt 
+  OccupiedSeat Int @db.SmallInt  
+  createdAt DateTime @default(now()) @db.Timestamp(0)
+  updatedAt DateTime @default(now()) @db.Timestamp(0) @updatedAt
+}
