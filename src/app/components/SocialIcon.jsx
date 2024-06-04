@@ -18,21 +18,36 @@ const SocialIcon = async(props) => {
   
   return (
     <div> 
-        {
-          
-              data.socials.map((elm,index)=>{
-                return (
-                  
-               <ul className= {`flex`} key={index} >
-                 <li><Link href={elm['facebook']} target='_blank'><FaFacebookF  className=' size-[35px] bg-blue-700 text-white p-1'/></Link></li>
-                <li><Link href={elm['twitter']} target='_blank'><FaTwitter className=' size-[35px] bg-[#309AEA] p-1'/></Link></li>
-                <li><Link href={elm['youtube']} target='_blank'><IoLogoYoutube className=' size-[35px] bg-[#CA3523] p-1'/></Link></li>
-                <li><Link href={elm['Linkedin']} target='_blank'><FaLinkedin className=' size-[35px] bg-[#FF3333] p-1'/></Link></li>
-               
-               </ul>
-              )
-              })
-        }
+       {
+  data.socials.map((elm, index) => {
+    return (
+      // The key should be on the `ul` element
+      <ul key={index} className="flex">
+        {/* No need for a key on the `li` or `Link` elements here */}
+        <li>
+          <Link href={elm['facebook']} target='_blank'>
+            <FaFacebookF className='size-[35px] bg-blue-700 text-white p-1' />
+          </Link>
+        </li>
+        <li>
+          <Link href={elm['twitter']} target='_blank'>
+            <FaTwitter className='size-[35px] bg-[#309AEA] p-1' />
+          </Link>
+        </li>
+        <li>
+          <Link href={elm['youtube']} target='_blank'>
+            <IoLogoYoutube className='size-[35px] bg-[#CA3523] p-1' />
+          </Link>
+        </li>
+        <li>
+          <Link href={elm['Linkedin']} target='_blank'>
+            <FaLinkedin className='size-[35px] bg-[#FF3333] p-1' />
+          </Link>
+        </li>
+      </ul>
+    );
+  })
+}
 
     </div>
   )
