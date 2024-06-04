@@ -25,22 +25,22 @@ const SocialIcon = async(props) => {
       <ul key={index} className="flex">
         {/* No need for a key on the `li` or `Link` elements here */}
         <li key='1'>
-          <Link href={elm['facebook']} target='_blank'>
+          <Link key='1' href={elm['facebook']} target='_blank'>
             <FaFacebookF className='size-[35px] bg-blue-700 text-white p-1' />
           </Link>
         </li>
         <li key='2'>
-          <Link href={elm['twitter']} target='_blank'>
+          <Link key='2' href={elm['twitter']} target='_blank'>
             <FaTwitter className='size-[35px] bg-[#309AEA] p-1' />
           </Link>
         </li>
         <li key='3'>
-          <Link href={elm['youtube']} target='_blank'>
+          <Link key='3' href={elm['youtube']} target='_blank'>
             <IoLogoYoutube className='size-[35px] bg-[#CA3523] p-1' />
           </Link>
         </li>
         <li key='4'>
-          <Link href={elm['Linkedin']} target='_blank'>
+          <Link key='4' href={elm['Linkedin']} target='_blank'>
             <FaLinkedin className='size-[35px] bg-[#FF3333] p-1' />
           </Link>
         </li>
