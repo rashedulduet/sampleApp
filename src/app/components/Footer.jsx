@@ -3,16 +3,9 @@ import { IoLocationOutline } from "react-icons/io5";
 import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import SocialIcon from './SocialIcon';
 
-async function getdata(){
-    const social=(await(await fetch(`http://localhost:3000/api/social`, {
-        next:{
-          revalidate:30
-        }
-      })).json())['data']
-     return {social:social}
-  }
+
 const Footer = async() => {
-    const data=await getdata() 
+       
   return (
     <div>
         <div className=' grid lg:grid-cols-4 bg-[#333333]'>
@@ -43,7 +36,7 @@ const Footer = async() => {
              </ul>
             </div>
             <div className='text-center'>
-        <SocialIcon data={data}/>
+        <SocialIcon />
                 
                 </div>            
         </div>

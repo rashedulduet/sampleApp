@@ -13,7 +13,7 @@ async function getdata(){
 
 const MenuBar =async (props) => {
   const data=await getdata() 
-  console.log(data)
+
   return (
     <div className=' shadow mb-1'>
      <div className="navbar grid md:grid-cols-8 mx-auto" >
