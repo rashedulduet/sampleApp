@@ -23,11 +23,11 @@ const SocialIcon = async(props) => {
               data.socials.map((elm,index)=>{
                 return (
                   
-               <ul className= {`flex`} >
-                 <li key={index}><Link key={index} href={elm['facebook']} target='_blank'><FaFacebookF  className=' size-[35px] bg-blue-700 text-white p-1'/></Link></li>
-                <li key={index}><Link key={index} href={elm['twitter']} target='_blank'><FaTwitter className=' size-[35px] bg-[#309AEA] p-1'/></Link></li>
-                <li key={index}><Link key={index} href={elm['youtube']} target='_blank'><IoLogoYoutube className=' size-[35px] bg-[#CA3523] p-1'/></Link></li>
-                <li key={index}><Link key={index} href={elm['Linkedin']} target='_blank'><FaLinkedin className=' size-[35px] bg-[#FF3333] p-1'/></Link></li>
+               <ul className= {`flex`} key={index} >
+                 <li><Link href={elm['facebook']} target='_blank'><FaFacebookF  className=' size-[35px] bg-blue-700 text-white p-1'/></Link></li>
+                <li><Link href={elm['twitter']} target='_blank'><FaTwitter className=' size-[35px] bg-[#309AEA] p-1'/></Link></li>
+                <li><Link href={elm['youtube']} target='_blank'><IoLogoYoutube className=' size-[35px] bg-[#CA3523] p-1'/></Link></li>
+                <li><Link href={elm['Linkedin']} target='_blank'><FaLinkedin className=' size-[35px] bg-[#FF3333] p-1'/></Link></li>
                
                </ul>
               )
