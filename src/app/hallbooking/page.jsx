@@ -1,16 +1,13 @@
 import React from 'react'
+import FormComponent from '../components/FormComponent'
 import PlainLayout from '../components/PlainLayout'
-import Hero from '../components/Hero'
-import Event from '../components/Event'
-import Booking from '../components/Booking'
+import { Toaster } from 'react-hot-toast'
 
 const page = () => {
   return (
     <PlainLayout>
-      <Hero/>
-      <Booking/>
-     <Event/>
-     
+      <FormComponent/>
+      <Toaster/>
     </PlainLayout>
   )
 }

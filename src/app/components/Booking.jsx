@@ -8,7 +8,7 @@ const Booking = () => {
       <div className=' mydiv bg-[#1ABC9C]'>
         <img src="../image/hall.png" alt="" srcset=""  className=' mx-auto pt-[20px]'/>
                <div className='pt-[23px] text-center'>
-               <a href='../booking/hallBooking' className=' text-white'>Hall Booking</a>
+               <a href='../hallbooking' className=' text-white'>Hall Booking</a>
                </div>
       </div>
       </div>

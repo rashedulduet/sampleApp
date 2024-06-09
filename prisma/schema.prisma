@@ -71,3 +71,13 @@ model seatPlan{
   createdAt DateTime @default(now()) @db.Timestamp(0)
   updatedAt DateTime @default(now()) @db.Timestamp(0) @updatedAt
 }
+model hallbooking{
+  id Int @id @default(autoincrement())
+  hallName String @db.VarChar(200)
+  requiredSeat Int @db.SmallInt 
+  entryDate String @db.VarChar(200)
+  exitDate String @db.VarChar(200)
+  hallType String @db.VarChar(200) 
+  createdAt DateTime @default(now()) @db.Timestamp(0)
+  updatedAt DateTime @default(now()) @db.Timestamp(0) @updatedAt
+}

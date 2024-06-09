@@ -1,7 +1,7 @@
 import React from 'react'
 import { IoLocationOutline } from "react-icons/io5";
 import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
-import SocialIcon from './SocialIcon';
+// import SocialIcon from './SocialIcon';
 
 
 const Footer = async() => {
@@ -36,7 +36,7 @@ const Footer = async() => {
              </ul>
             </div>
             <div className='text-center'>
-        <SocialIcon />
+        {/* <SocialIcon /> */}
                 
                 </div>            
         </div>
